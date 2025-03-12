@@ -8,8 +8,6 @@ const wss = new WebSocket.Server({ server });
 
 const clients = new Set();
 
-
-
 wss.on('connection', (ws) => {
   console.log('New client connected');
   clients.add(ws);
