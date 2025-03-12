@@ -12,6 +12,8 @@ wss.on('connection', (ws) => {
   console.log('New client connected');
   clients.add(ws);
 
+
+  
   ws.send(JSON.stringify({ type: 'info', message: 'Welcome to the chat!' }));
 
   ws.on('message', (message) => {
